@@ -1,0 +1,31 @@
+.container {
+  margin: 15px;
+}
+
+.border {
+  border: solid 1px #7f867f;
+  border-radius: 7px;
+}
+
+.header {
+  margin: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  padding: 10px 20px;
+}
+
+.file-container {
+  list-style-type: none;
+  -webkit-padding-start: 0px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  margin: 10px 20px;
+}
