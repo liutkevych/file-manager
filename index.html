@@ -33,15 +33,16 @@
 
     <script id="files-template" type="text/x-handlebars-template">
       {{#each items}}
+      {{#if name}}
       <li class="item border">
         <span>{{name}}</span>
-        {{#if isFolder}}<span>folder</span>{{/if}}
         <span>Created at: {{date}}</span>
         <span>
-          <span><button class="btn border" id="rename" onclick=console.log(this)>Rename</button></span>
-          <span><button class="btn border" id="delete">Delete</button></span>
+          <span><button class="btn border" onclick="renameItem({{@index}})">Rename</button></span>
+          <span><button class="btn border" onclick="deleteItem({{@index}})">Delete</button></span>
         </span>
       </li>
+      {{/if}}
       {{/each}}
     </script>
 
