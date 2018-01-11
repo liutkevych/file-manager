@@ -22,6 +22,11 @@
   -webkit-padding-start: 0px;
 }
 
+.info-bar {
+  padding: 10px 20px;
+  align-items: center;
+}
+
 .item {
   display: flex;
   justify-content: space-between;
