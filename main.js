@@ -61,7 +61,7 @@ function applyFilters() {
   // Function for filtering by the date of cteating
   function dateFilter () {
     filteredElements.items = resultElements.items.filter(function(item){
-      return item.date > baseDate;
+      return Date.parse(item.date) > Date.parse(baseDate);
     });
     filteredHtml();
   };
@@ -76,7 +76,7 @@ function applyFilters() {
 
   function deepFilter() {
     filteredElements.items = resultElements.items.filter(function(item){
-      return (item.isFolder === true && item.date > baseDate);
+      return (item.isFolder === true && Date.parse(item.date) > Date.parse(baseDate));
     });
     filteredHtml();
   }
@@ -85,13 +85,10 @@ function applyFilters() {
     alert('Please use some filters');
     updatedHtml();
   } else if (!document.getElementById('showFolders').checked) {
-    console.log('use dateFilter()');
     dateFilter();
   } else if (!document.getElementById('date').value) {
-    console.log('use typeFilter()');
     typeFilter();
   } else {
-    console.log('use both filter');
     deepFilter();
   }
 };
